@@ -133,7 +133,7 @@ function ForecastCard({ day, isActive, onClick }: ForecastCardProps) {
 
 // ─── Climate Resilience Banner ────────────────────────────────────────────────
 function ClimateResilienceBanner({ weather }: { weather: ExtendedWeatherData }) {
-  const { language } = useI18n();
+  const {lang: language } = useI18n();
   const [alertText, setAlertText] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
