@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * lib/i18n/LanguageProvider.tsx
  * App-wide language layer.
