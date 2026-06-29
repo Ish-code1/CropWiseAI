@@ -15,6 +15,7 @@ import { useLocation } from "@/lib/hooks/useLocation";
 import { useI18n } from "@/lib/i18n/LanguageProvider";
 import type { MarketPrice } from "@/types";
 import type { ExtendedWeatherData } from "@/lib/weather";
+import { motion, type Variants } from "framer-motion";
 
 const QUICK_ACTIONS = [
   { href: "/activity-log",   icon: ClipboardList, label: "Log Activity",  bg: "bg-blue-900/40  border-blue-800/40",  ic: "text-blue-400"  },
@@ -67,20 +68,25 @@ const CHART_DATA = [
   { day:"Day 30", "Rainfall (mm)":15, "Moisture Content (%)":65 },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.1 }
-  }
+    transition: { staggerChildren: 0.1 },
+  },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, y: 0,
-    transition: { type: "spring", stiffness: 300, damping: 24 }
-  }
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 24,
+    },
+  },
 };
 
 export default function DashboardPage() {
