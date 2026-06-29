@@ -7,7 +7,7 @@ const user = process.env.NEO4J_USER || 'neo4j';
 const password = process.env.NEO4J_PASSWORD || 'password';
 
 // Singleton instance
-let driver: neo4j.Driver | null = null;
+let driver: Driver | null = null;
 
 export function getNeo4jDriver() {
   if (!driver) {
