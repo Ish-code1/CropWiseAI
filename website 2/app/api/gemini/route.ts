@@ -327,7 +327,7 @@ async function handlePestDiagnosis(
       
       const result = await session.run(query, { diseaseName });
       
-      const sustainableTreatments = result.records.map(record => ({
+      const sustainableTreatments = result.records.map((record: any) => ({
         name: record.get('name'),
         type: record.get('type'),
         isEcoFriendly: record.get('isEcoFriendly'),
