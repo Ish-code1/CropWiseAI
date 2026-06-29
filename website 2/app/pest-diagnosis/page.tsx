@@ -1,3 +1,4 @@
+"use client";
 /**
  * app/pest-diagnosis/page.tsx — v2
  * Rebuilt to match design Image 4 exactly.
