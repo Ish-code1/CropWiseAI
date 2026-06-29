@@ -1,4 +1,6 @@
-import neo4j from 'neo4j-driver';
+
+import neo4j, { type Driver } from 'neo4j-driver';
+
 
 const uri = process.env.NEO4J_URI || 'neo4j+s://placeholder.databases.neo4j.io';
 const user = process.env.NEO4J_USER || 'neo4j';
